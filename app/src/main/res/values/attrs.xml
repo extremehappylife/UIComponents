@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CornerGifView -->
+    <declare-styleable name="CornerGifView">
+        <attr name="leftTopCorner" format="dimension" />
+        <attr name="rightTopCorner" format="dimension" />
+        <attr name="leftBottomCorner" format="dimension" />
+        <attr name="rightBottomCorner" format="dimension" />
+        <attr name="cornerColor" format="color" />
+    </declare-styleable>
+
+</resources>
