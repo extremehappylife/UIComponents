@@ -7,7 +7,7 @@
 常见的图片加载框架加载动图时设置圆角属性无效时可以使用此控件。
 
 ### 用法
-```java
+```xml
     <com.example.uicomponents.cornergifview.CornerGifView
         android:id="@+id/iv_gif_corner"
         android:layout_width="200dp"
