@@ -6,6 +6,8 @@
 
 常见的图片加载框架加载动图设置圆角属性无效时可以使用此控件。
 
+![image](blob:https://tool.gifhome.com/807a38c7-5d68-4f95-ad30-eca87f5acf3c)
+
 ### 用法
 ```xml
     <com.example.uicomponents.cornergifview.CornerGifView
