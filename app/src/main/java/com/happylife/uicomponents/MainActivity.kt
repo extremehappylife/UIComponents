@@ -1,4 +1,4 @@
-package com.example.uicomponents
+package com.happylife.uicomponents
 
 import android.content.Intent
 import android.os.Bundle

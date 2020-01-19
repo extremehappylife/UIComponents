@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.uicomponents">
+    package="com.happylife.uicomponents">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.happylife.uicomponents.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +25,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CornerGifActivity" />
-        <activity android:name=".SlideBackActivity" />
+        <activity android:name="com.happylife.uicomponents.CornerGifActivity" />
+        <activity android:name="com.happylife.uicomponents.SlideBackActivity" />
     </application>
 
 </manifest>

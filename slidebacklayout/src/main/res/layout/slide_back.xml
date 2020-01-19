@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.slidebacklayout.SlideBackLayout
+<com.happylife.slidebacklayout.SlideBackLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:mirror="http://schemas.android.com/apk/res-auto"
     android:id="@+id/slide_back"

@@ -1,9 +1,8 @@
-package com.example.uicomponents
+package com.happylife.uicomponents
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.uicomponents.R
 import kotlinx.android.synthetic.main.activity_corner_gif.*
 
 class CornerGifActivity : AppCompatActivity() {
