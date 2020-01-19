@@ -12,7 +12,7 @@
 
 ### 用法
 ```xml
-    <com.example.uicomponents.cornergifview.CornerGifView
+<com.happylife.cornergifview.CornerGifView
         android:id="@+id/iv_gif_corner"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -21,5 +21,7 @@
         app:leftBottomCorner="10dp"
         app:leftTopCorner="10dp"
         app:rightBottomCorner="10dp"
-        app:rightTopCorner="10dp" />
+        app:rightTopCorner="10dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="5dp" />
 ```
