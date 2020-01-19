@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.slidebacklayout.SlideBackLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mirror="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slide_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    mirror:left_swipe="true"
+    mirror:right_swipe="false" />

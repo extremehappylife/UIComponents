@@ -10,9 +10,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // 圆角动图
         tv_corner_gif_view.setOnClickListener {
             Intent().apply {
                 setClass(this@MainActivity, CornerGifActivity::class.java)
+                startActivity(this)
+            }
+        }
+
+        // 滑动返回
+        slide_back.setOnClickListener {
+            Intent().apply {
+                setClass(this@MainActivity, SlideBackActivity::class.java)
                 startActivity(this)
             }
         }

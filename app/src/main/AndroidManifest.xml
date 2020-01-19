@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".cornergifview.CornerGifActivity" />
+        <activity android:name=".SlideBackActivity" />
     </application>
 
 </manifest>

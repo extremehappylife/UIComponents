@@ -11,4 +11,14 @@
         android:background="#e1e1e1"
         android:gravity="center"
         android:text="CornerGifView" />
+
+    <TextView
+        android:id="@+id/slide_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="SlideBack" />
+
 </LinearLayout>
