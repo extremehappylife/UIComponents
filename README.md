@@ -6,7 +6,7 @@
 
 常见的图片加载框架加载动图设置圆角属性无效时可以使用此控件。
 
-![image](https://raw.githubusercontent.com/extremehappylife/UIComponents/master/app/src/main/res/drawable/gifhome_448x960_4s.gif)
+![image](https://github.com/extremehappylife/UIComponents/raw/master/app/src/main/res/drawable/gifhome_320x685_4s.gif)
 
 ### 用法
 ```xml
