@@ -1,6 +1,7 @@
 # UIComponents
 
-动图圆角控件
+这个项目整合了一些常用的UI、特效组件，包含：\
+CornerGifView(动图圆角控件)
 
 ## CornerGifView
 
