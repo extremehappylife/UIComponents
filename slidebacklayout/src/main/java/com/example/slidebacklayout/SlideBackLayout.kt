@@ -12,6 +12,8 @@ import android.view.MotionEvent
 import android.view.ViewParent
 import android.widget.FrameLayout
 import androidx.annotation.RequiresApi
+import kotlin.math.abs
+import kotlin.math.sin
 
 class SlideBackLayout @JvmOverloads constructor(
     context: Context,
@@ -48,20 +50,21 @@ class SlideBackLayout @JvmOverloads constructor(
     }
 
     companion object {
-        private val TAG = "SlideBackLayout"
+        private const val TAG = "SlideBackLayout"
     }
 
     private fun initDrawTool() {
         mPaint = Paint()
-        mPaint!!.color = Color.BLACK
-        mPaint!!.strokeWidth = 8f
-        mPaint!!.isAntiAlias = true
-        mPaint!!.style = Paint.Style.FILL
+        mPaint?.color = Color.BLACK
+        mPaint?.strokeWidth = 8f
+        mPaint?.isAntiAlias = true
+        mPaint?.style = Paint.Style.FILL
+
         mPaintWhite = Paint()
-        mPaintWhite!!.color = Color.WHITE
-        mPaintWhite!!.strokeWidth = 4f
-        mPaintWhite!!.isAntiAlias = true
-        mPaintWhite!!.strokeCap = Paint.Cap.ROUND
+        mPaintWhite?.color = Color.WHITE
+        mPaintWhite?.strokeWidth = 4f
+        mPaintWhite?.isAntiAlias = true
+        mPaintWhite?.strokeCap = Paint.Cap.ROUND
         mPath = Path()
     }
 
@@ -102,7 +105,7 @@ class SlideBackLayout @JvmOverloads constructor(
                 if (progress > 0.9 * 0.665 && (mIsLeftStart || mIsRightStart)) {
                     Log.d(TAG, "onTouchEvent: action up")
                     mIsAccept = true
-                    mSlideBackListener!!.completeSwipeBack()
+                    mSlideBackListener?.completeSwipeBack()
                 }
                 mDrawBack = true
                 postInvalidateDelayed(0)
@@ -172,50 +175,46 @@ class SlideBackLayout @JvmOverloads constructor(
         if (mIsRightStart) {
             valueSineStart += width.toFloat()
         }
-        mPath!!.reset()
-        mPath!!.moveTo(valueSineStart, sineLineStartY)
+        mPath?.reset()
+        mPath?.moveTo(valueSineStart, sineLineStartY)
         var valueSine: Float
         while (sineIndex <= sineWidth * 4 / 3) {
-            valueSine =
-                (Math.sin((sineIndex / sineWidth).toDouble() * 1.5 * Math.PI + sineTheta) * amplitude + height - amplitude).toFloat()
+            valueSine = (sin((sineIndex / sineWidth).toDouble() * 1.5 * Math.PI + sineTheta) * amplitude + height - amplitude).toFloat()
             if (mIsRightStart) {
                 valueSine *= -1f
                 valueSine += width.toFloat()
             }
-            mPath!!.lineTo(valueSine, sineLineStartY + sineIndex)
+            mPath?.lineTo(valueSine, sineLineStartY + sineIndex)
             sineIndex++
         }
-        mPath!!.lineTo(valueSineStart, sineLineStartY)
-        mPath!!.close()
-        mPaint!!.alpha = (190f * progress * 1.5f).toInt()
-        canvas.drawPath(mPath!!, mPaint!!)
+        mPath?.lineTo(valueSineStart, sineLineStartY)
+        mPath?.close()
+        mPaint?.alpha = (190f * progress * 1.5f).toInt()
+
+        mPaint?.let { paint ->
+            mPath?.let { path ->
+                canvas.drawPath(path, paint)
+            }
+        }
 
         var midBackX = amplitude * 1.25f
         val midBackY = mStartY
 
-        mPaintWhite!!.alpha = (255f * progress * 1.5f).toInt()
+        mPaintWhite?.alpha = (255f * progress * 1.5f).toInt()
         val lineLength = dip2px(5f).toFloat() * progress * 1.5f
 
         if (mIsRightStart) {
             midBackX *= -1f
             midBackX += width + lineLength
-            canvas.drawLine(
-                midBackX - lineLength, midBackY, midBackX, midBackY - lineLength,
-                mPaintWhite!!
-            )
-            canvas.drawLine(
-                midBackX - lineLength, midBackY, midBackX, midBackY + lineLength,
-                mPaintWhite!!
-            )
+            mPaintWhite?.let{
+                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY - lineLength, it)
+                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY + lineLength, it)
+            }
         } else {
-            canvas.drawLine(
-                midBackX - lineLength, midBackY, midBackX, midBackY + lineLength,
-                mPaintWhite!!
-            )
-            canvas.drawLine(
-                midBackX - lineLength, midBackY, midBackX, midBackY - lineLength,
-                mPaintWhite!!
-            )
+            mPaintWhite?.let{
+                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY + lineLength, it)
+                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY - lineLength, it)
+            }
         }
 
         // 慢回弹
@@ -235,7 +234,7 @@ class SlideBackLayout @JvmOverloads constructor(
     }
 
     private fun calculateProgress(): Float {
-        val distance = Math.abs(mCurrentX - mStartX)
+        val distance = abs(mCurrentX - mStartX)
         val swipeMaximum = 0.6665f
         if (distance > mHalfScreenWidth) {
             return swipeMaximum
@@ -251,11 +250,11 @@ class SlideBackLayout @JvmOverloads constructor(
         return (dipValue * scale + 0.5f).toInt()
     }
 
-    fun setRightSlideEnable(enable: Boolean) {
+    private fun setRightSlideEnable(enable: Boolean) {
         this.mIsRightSlideEnable = enable
     }
 
-    fun setLeftSlideEnable(enable: Boolean) {
+    private fun setLeftSlideEnable(enable: Boolean) {
         this.mIsLeftSlideEnable = enable
     }
 

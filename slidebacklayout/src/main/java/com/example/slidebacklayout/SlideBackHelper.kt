@@ -7,28 +7,28 @@ import androidx.annotation.LayoutRes
 
 object SlideBackHelper {
 
-    fun attach(activity: Activity, @LayoutRes layoutId: Int): SlideBackLayout {
-        return attach(activity, null, layoutId)
+    fun attach(activity: Activity): SlideBackLayout {
+        return attach(activity, null, R.layout.slide_back)
     }
 
-    fun attach(
+    private fun attach(
         activity: Activity?,
-        listener: SlideBackLayout.OnSlideBackListener?, @LayoutRes layoutId: Int
-    ): SlideBackLayout {
-        val mSwipeBackLayout =
-            LayoutInflater.from(activity).inflate(layoutId, null) as SlideBackLayout
+        listener: SlideBackLayout.OnSlideBackListener?,
+        @LayoutRes layoutId: Int): SlideBackLayout {
+
+        val mSlideBackLayout = LayoutInflater.from(activity).inflate(layoutId, null) as SlideBackLayout
         if (listener == null) {
-            mSwipeBackLayout.setSwipeBackListener(object : SlideBackLayout.OnSlideBackListener {
+            mSlideBackLayout.setSwipeBackListener(object : SlideBackLayout.OnSlideBackListener {
                 override fun completeSwipeBack() {
                     activity?.finish()
                 }
             })
         } else {
-            mSwipeBackLayout.setSwipeBackListener(listener)
+            mSlideBackLayout.setSwipeBackListener(listener)
         }
 
         if (activity == null || activity.window == null || activity.window.decorView !is ViewGroup) {
-            return mSwipeBackLayout
+            return mSlideBackLayout
         }
 
         val decorView = activity.window.decorView as ViewGroup
@@ -36,11 +36,11 @@ object SlideBackHelper {
             if (decorView.childCount > 0) {
                 val child = decorView.getChildAt(0)
                 decorView.removeView(child)
-                mSwipeBackLayout.addView(child)
+                mSlideBackLayout.addView(child)
             }
 
-            decorView.addView(mSwipeBackLayout)
+            decorView.addView(mSlideBackLayout)
         }
-        return mSwipeBackLayout
+        return mSlideBackLayout
     }
 }

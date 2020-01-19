@@ -10,8 +10,7 @@ class SlideBackActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_slide_back)
 
-        val mSlideBackLayout: SlideBackLayout =
-            SlideBackHelper.attach(this, R.layout.slide_back)
+        val mSlideBackLayout: SlideBackLayout = SlideBackHelper.attach(this)
         // mSlideBackLayout.setRightSlideEnable(true);
         // mSlideBackLayout.setLeftSlideEnable(true);
         mSlideBackLayout.setSwipeBackListener(object : SlideBackLayout.OnSlideBackListener {
