@@ -2,7 +2,12 @@
 
 这个项目整合了一些实用的UI、特效组件，包含：
 
-+ CornerGifView(动图圆角控件)
+- [UIComponents](#uicomponents)
+  * [CornerGifView(动图圆角控件)](#cornergifview)
+    + [用法](#--)
+  * [SlideBackLayout](#slidebacklayout)
+    + [用法](#---1)
+
 
 ## CornerGifView
 
