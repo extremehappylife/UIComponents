@@ -1,4 +1,4 @@
-package com.example.uicomponents.cornergifview
+package com.example.uicomponents
 
 import android.content.Context
 import android.graphics.*
