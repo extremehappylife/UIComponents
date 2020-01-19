@@ -2,7 +2,7 @@
 
 这个项目整合了一些常用的UI、特效组件，包含：
 
-<font color=#ff6700 size=4>CornerGifView(动图圆角控件)</font>
++ CornerGifView(动图圆角控件)
 
 ## CornerGifView
 
