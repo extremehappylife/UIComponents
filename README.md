@@ -1,11 +1,14 @@
 # UIComponents
 
-这个项目整合了一些实用的UI、特效组件，包含：
+这个项目整合了一些实用的UI组件、特效组件，包含：
 
+CornerGifView（动图圆角控件）、SlideBackLayout（Activity滑动返回组件）
+
+## 目录
 - [UIComponents](#uicomponents)
-  * [CornerGifView(动图圆角控件)](#cornergifview)
+  * [CornerGifView（动图圆角控件）](#cornergifview)
     + [用法](#--)
-  * [SlideBackLayout](#slidebacklayout)
+  * [SlideBackLayout（Activity滑动返回组件）](#slidebacklayout)
     + [用法](#---1)
 
 
