@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -15,7 +16,9 @@
         app:leftBottomCorner="10dp"
         app:leftTopCorner="10dp"
         app:rightBottomCorner="10dp"
-        app:rightTopCorner="10dp" />
+        app:rightTopCorner="10dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="5dp" />
 
     <com.example.cornergifview.CornerGifView
         android:id="@+id/iv_gif_corner2"
