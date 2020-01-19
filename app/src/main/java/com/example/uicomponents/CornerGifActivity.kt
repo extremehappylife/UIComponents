@@ -1,4 +1,4 @@
-package com.example.uicomponents.cornergifview
+package com.example.uicomponents
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
