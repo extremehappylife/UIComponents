@@ -25,3 +25,21 @@
         app:strokeColor="@color/colorPrimary"
         app:strokeWidth="5dp" />
 ```
+
+## SlideBackLayout
+
+大部分用户还是习惯滑动返回，对于某些手机系统不支持滑动返回的手机，可在自己的应用中进行配置
+
+![image](https://github.com/extremehappylife/UIComponents/raw/master/app/src/main/res/drawable/gifhome_320x685_4s.gif)
+
+### 用法
+```kotlin
+        val mSlideBackLayout: SlideBackLayout = SlideBackHelper.attach(this)
+        // mSlideBackLayout.setRightSlideEnable(true);
+        // mSlideBackLayout.setLeftSlideEnable(true);
+        mSlideBackLayout.setSwipeBackListener(object : SlideBackLayout.OnSlideBackListener {
+            override fun completeSwipeBack() {
+                finish()
+            }
+        })
+```
