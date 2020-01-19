@@ -6,7 +6,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.example.uicomponents.CornerGifView
+    <com.example.cornergifview.CornerGifView
         android:id="@+id/iv_gif_corner"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -16,5 +16,17 @@
         app:leftTopCorner="10dp"
         app:rightBottomCorner="10dp"
         app:rightTopCorner="10dp" />
+
+    <com.example.cornergifview.CornerGifView
+        android:id="@+id/iv_gif_corner2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        app:cornerColor="#ffffff"
+        app:leftBottomCorner="100dp"
+        app:leftTopCorner="100dp"
+        app:rightBottomCorner="100dp"
+        app:rightTopCorner="100dp" />
 
 </LinearLayout>

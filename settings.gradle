@@ -1,2 +1,2 @@
-include ':cornergifview'
+include ':app', ':cornergifview'
 rootProject.name='UIComponents'

@@ -1,9 +1,8 @@
-package com.example.uicomponents
+package com.example.cornergifview
 
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
-import com.example.uicomponents.R
 import pl.droidsonroids.gif.GifImageView
 
 class CornerGifView @JvmOverloads constructor(
