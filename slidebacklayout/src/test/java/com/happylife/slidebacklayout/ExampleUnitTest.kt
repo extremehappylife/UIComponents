@@ -1,4 +1,4 @@
-package com.example.slidebacklayout
+package com.happylife.slidebacklayout
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.cornergifview
+package com.happylife.cornergifview
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

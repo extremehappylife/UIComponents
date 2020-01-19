@@ -1,5 +1,6 @@
-package com.example.slidebacklayout
+package com.happylife.slidebacklayout
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -82,6 +83,7 @@ class SlideBackLayout @JvmOverloads constructor(
                 super.onInterceptTouchEvent(ev)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     override fun onTouchEvent(event: MotionEvent): Boolean {
         disallowParentsInterceptTouchEvent(parent)
@@ -89,7 +91,7 @@ class SlideBackLayout @JvmOverloads constructor(
             MotionEvent.ACTION_MOVE -> {
                 mCurrentX = event.x
                 if (!mHasJudged) {
-                    val distanceX = Math.abs(mCurrentX - mStartX)
+                    val distanceX = abs(mCurrentX - mStartX)
                     if (distanceX > 30) {
                         allowParentsInterceptTouchEvent(parent)
                         mHasJudged = true
@@ -179,7 +181,8 @@ class SlideBackLayout @JvmOverloads constructor(
         mPath?.moveTo(valueSineStart, sineLineStartY)
         var valueSine: Float
         while (sineIndex <= sineWidth * 4 / 3) {
-            valueSine = (sin((sineIndex / sineWidth).toDouble() * 1.5 * Math.PI + sineTheta) * amplitude + height - amplitude).toFloat()
+            valueSine =
+                (sin((sineIndex / sineWidth).toDouble() * 1.5 * Math.PI + sineTheta) * amplitude + height - amplitude).toFloat()
             if (mIsRightStart) {
                 valueSine *= -1f
                 valueSine += width.toFloat()
@@ -206,14 +209,38 @@ class SlideBackLayout @JvmOverloads constructor(
         if (mIsRightStart) {
             midBackX *= -1f
             midBackX += width + lineLength
-            mPaintWhite?.let{
-                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY - lineLength, it)
-                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY + lineLength, it)
+            mPaintWhite?.let {
+                canvas.drawLine(
+                    midBackX - lineLength,
+                    midBackY,
+                    midBackX,
+                    midBackY - lineLength,
+                    it
+                )
+                canvas.drawLine(
+                    midBackX - lineLength,
+                    midBackY,
+                    midBackX,
+                    midBackY + lineLength,
+                    it
+                )
             }
         } else {
-            mPaintWhite?.let{
-                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY + lineLength, it)
-                canvas.drawLine(midBackX - lineLength, midBackY, midBackX, midBackY - lineLength, it)
+            mPaintWhite?.let {
+                canvas.drawLine(
+                    midBackX - lineLength,
+                    midBackY,
+                    midBackX,
+                    midBackY + lineLength,
+                    it
+                )
+                canvas.drawLine(
+                    midBackX - lineLength,
+                    midBackY,
+                    midBackX,
+                    midBackY - lineLength,
+                    it
+                )
             }
         }
 

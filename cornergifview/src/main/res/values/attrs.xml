@@ -6,6 +6,9 @@
         <attr name="rightTopCorner" format="dimension" />
         <attr name="leftBottomCorner" format="dimension" />
         <attr name="rightBottomCorner" format="dimension" />
+        <attr name="strokeCorner" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
         <attr name="cornerColor" format="color" />
     </declare-styleable>
 

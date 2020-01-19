@@ -1,4 +1,4 @@
-package com.example.cornergifview
+package com.happylife.uicomponents
 
 import org.junit.Test
 

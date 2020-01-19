@@ -1,9 +1,9 @@
-package com.example.uicomponents
+package com.happylife.uicomponents
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.slidebacklayout.SlideBackHelper
-import com.example.slidebacklayout.SlideBackLayout
+import com.happylife.slidebacklayout.SlideBackHelper
+import com.happylife.slidebacklayout.SlideBackLayout
 
 class SlideBackActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
