@@ -24,5 +24,13 @@ class MainActivity : AppCompatActivity() {
                 startActivity(this)
             }
         }
+
+        // 点赞动效
+        like_animator.setOnClickListener {
+            Intent().apply {
+                setClass(this@MainActivity, LoveViewActivity::class.java)
+                startActivity(this)
+            }
+        }
     }
 }

@@ -21,4 +21,13 @@
         android:gravity="center"
         android:text="SlideBack" />
 
+    <TextView
+        android:id="@+id/like_animator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="LikeAnimator" />
+
 </LinearLayout>

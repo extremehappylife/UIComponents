@@ -17,16 +17,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity android:name="com.happylife.uicomponents.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.happylife.uicomponents.CornerGifActivity" />
-        <activity android:name="com.happylife.uicomponents.SlideBackActivity" />
+        <activity android:name=".CornerGifActivity" />
+        <activity android:name=".SlideBackActivity" />
+        <activity android:name=".LoveViewActivity" />
     </application>
 
 </manifest>
