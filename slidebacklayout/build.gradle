@@ -1,8 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'maven'
-apply plugin: 'bintray-release'
 apply plugin: 'com.novoda.bintray-release'//添加
 
 android {
@@ -40,8 +38,8 @@ dependencies {
 }
 
 publish {
-    userOrg = 'extremehappylife' // bintray.com 该网站你的用户名
-    groupId = 'com.happylife.uicomponents.slidebacklayout' // jcenter 上的路径
+    userOrg = 'extremehappy' // bintray.com 该网站你的用户名
+    groupId = 'com.happylife.uicomponents' // jcenter 上的路径，项目包名
     artifactId = 'slidebacklayout' // 项目名称
     publishVersion = '1.0.0' // 版本号
     desc = 'slidebacklayout' // 描述，不重要
