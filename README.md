@@ -14,11 +14,26 @@ CornerGifView（动图圆角控件）、SlideBackLayout（Activity滑动返回�
 
 ## CornerGifView
 
-常见的图片加载框架加载动图设置圆角属性无效时可以使用此控件。
+常见的图片加载框架加载动图设置圆角属性无效时可以使用此控件。支持边框设置。
 
 ![image](https://github.com/extremehappylife/UIComponents/raw/master/app/src/main/res/drawable/gifhome_320x685_4s.gif)
 
 ### 用法
+在root下的build.gradle中增加maven配置
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/extremehappy/maven' }
+    }
+}
+```
+在app目录下的build.gradle中增加依赖
+```groovy
+implementation 'com.happylife.uicomponents:corner-gif:1.0.0'
+```
+在布局文件中使用
 ```xml
 <com.happylife.cornergifview.CornerGifView
         android:id="@+id/iv_gif_corner"
@@ -41,6 +56,21 @@ CornerGifView（动图圆角控件）、SlideBackLayout（Activity滑动返回�
 ![image](https://github.com/extremehappylife/UIComponents/blob/master/app/src/main/res/drawable/gifhome_320x693_5s.gif)
 
 ### 用法
+在root下的build.gradle中增加maven配置
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/extremehappy/maven' }
+    }
+}
+```
+在app目录下的build.gradle中增加依赖
+```groovy
+implementation 'com.happylife.uicomponents:slidebacklayout:1.0.0'
+```
+Activity页面中使用
 ```kotlin
 val mSlideBackLayout: SlideBackLayout = SlideBackHelper.attach(this)
 // mSlideBackLayout.setRightSlideEnable(true);
