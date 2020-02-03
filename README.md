@@ -2,13 +2,15 @@
 
 这个项目整合了一些实用的UI组件、特效组件，包含：
 
-CornerGifView（动图圆角控件）、SlideBackLayout（Activity滑动返回组件）
+CornerGifView（动图圆角控件）、SlideBackLayout（Activity滑动返回组件）、LikeAnimator（点赞动效）
 
 ## 目录
 - [UIComponents](#uicomponents)
   * [CornerGifView（动图圆角控件）](#cornergifview)
     + [用法](#--)
   * [SlideBackLayout（Activity滑动返回组件）](#slidebacklayout)
+    + [用法](#---1)
+  * [LikeAnimator（点赞动效）](#likeanimator)
     + [用法](#---1)
 
 
@@ -80,4 +82,41 @@ mSlideBackLayout.setSwipeBackListener(object : SlideBackLayout.OnSlideBackListen
        finish()
    }
 })
+```
+
+## LikeAnimator
+
+点赞动效，可用于短视频等场景，支持自定义设置点赞动效的图片，默认为心形
+
+![image](https://github.com/extremehappylife/UIComponents/raw/master/app/src/main/res/drawable/gifhome_320x685_4s.gif)
+
+### 用法
+在root下的build.gradle中增加maven配置
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/extremehappy/maven' }
+    }
+}
+```
+在app目录下的build.gradle中增加依赖
+```groovy
+implementation 'com.happylife.uicomponents:likeanimator:1.0.0'
+```
+在布局文件中使用
+```xml
+<com.example.likeanimator.LikeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/like_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 将自己的真正 view（比如短视频） 嵌套在内部-->
+</com.example.likeanimator.LikeView>
+```
+
+```kotlin
+like_view.setDrawableId(R.drawable.details_icon_like_pressed) // 可自行设置所需的动效图片，默认为心形
 ```
