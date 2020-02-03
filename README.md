@@ -88,7 +88,7 @@ mSlideBackLayout.setSwipeBackListener(object : SlideBackLayout.OnSlideBackListen
 
 点赞动效，可用于短视频等场景，支持自定义设置点赞动效的图片，默认为心形
 
-![image](https://github.com/extremehappylife/UIComponents/raw/master/app/src/main/res/drawable/gifhome_320x685_4s.gif)
+![image](https://github.com/extremehappylife/UIComponents/blob/master/app/src/main/res/drawable/gifhome_320x693_like_animator.gif)
 
 ### 用法
 在root下的build.gradle中增加maven配置
