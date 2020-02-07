@@ -1,4 +1,4 @@
-![image](https://img.shields.io/badge/slidebacklayout-1.0.0-blue.svg)
+![image](https://img.shields.io/badge/slidebacklayout-1.0.0-blue.svg)  ![image](https://img.shields.io/badge/corner--gif-1.0.0-green.svg)
 
 # UIComponents
 
