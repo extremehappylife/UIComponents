@@ -1,3 +1,5 @@
+https://img.shields.io/badge/slidebacklayout-1.0.0-blue
+
 # UIComponents
 
 这个项目整合了一些实用的UI组件、特效组件，包含：
