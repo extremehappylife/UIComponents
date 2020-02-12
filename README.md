@@ -106,14 +106,15 @@ implementation 'com.happylife.uicomponents:likeanimator:1.0.0'
 ```
 在布局文件中使用
 ```xml
-<com.example.likeanimator.LikeView
+<?xml version="1.0" encoding="utf-8"?>
+<com.happylife.likeanimator.LikeView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/like_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- 将自己的真正 view（比如短视频） 嵌套在内部-->
-</com.example.likeanimator.LikeView>
+</com.happylife.likeanimator.LikeView>
 ```
 
 ```kotlin
