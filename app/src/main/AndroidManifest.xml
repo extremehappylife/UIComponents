@@ -27,6 +27,8 @@
         <activity android:name=".CornerGifActivity" />
         <activity android:name=".SlideBackActivity" />
         <activity android:name=".LoveViewActivity" />
+        <activity android:name=".DragLayoutActivity" />
+        <activity android:name=".CompositeActivity" />
     </application>
 
 </manifest>

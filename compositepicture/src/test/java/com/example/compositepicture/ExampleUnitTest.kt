@@ -1,4 +1,4 @@
-package com.example.likeanimator
+package com.example.compositepicture
 
 import org.junit.Test
 

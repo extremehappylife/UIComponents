@@ -1,4 +1,4 @@
-package com.example.likeanimator
+package com.happylife.likeanimator
 
 import android.animation.*
 import android.annotation.SuppressLint

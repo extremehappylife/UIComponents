@@ -1,2 +1,2 @@
-include ':app', ':cornergifview', ':likeanimator' ,':slidebacklayout'
+include ':app', ':cornergifview', ':likeanimator', ':draglayout', ':compositepicture' ,':slidebacklayout'
 rootProject.name='UIComponents'

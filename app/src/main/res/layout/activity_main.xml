@@ -5,9 +5,18 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tv_drag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="DragLayout" />
+
+    <TextView
         android:id="@+id/tv_corner_gif_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:background="#e1e1e1"
         android:gravity="center"
         android:text="CornerGifView" />
@@ -29,5 +38,14 @@
         android:background="#e1e1e1"
         android:gravity="center"
         android:text="LikeAnimator" />
+
+    <TextView
+        android:id="@+id/tv_image_composite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="ImageComposite" />
 
 </LinearLayout>

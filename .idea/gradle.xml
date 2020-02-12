@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/compositepicture" />
             <option value="$PROJECT_DIR$/cornergifview" />
+            <option value="$PROJECT_DIR$/draglayout" />
             <option value="$PROJECT_DIR$/likeanimator" />
             <option value="$PROJECT_DIR$/slidebacklayout" />
           </set>

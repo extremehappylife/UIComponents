@@ -10,6 +10,6 @@ class LoveViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_love_view)
 
-        like_view.setDrawableId(R.drawable.details_icon_like_pressed)
+//        like_view.setDrawableId(R.drawable.details_icon_like_pressed)
     }
 }
