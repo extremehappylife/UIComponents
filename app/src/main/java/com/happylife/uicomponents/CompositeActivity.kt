@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
-import com.example.compositepicture.CompositeUtil
+import com.happylife.compositepicture.CompositeUtil
 import kotlinx.android.synthetic.main.activity_composite.*
 
 class CompositeActivity : Activity() {

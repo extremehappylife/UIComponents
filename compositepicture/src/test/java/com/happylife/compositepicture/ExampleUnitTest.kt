@@ -1,4 +1,4 @@
-package com.example.compositepicture
+package com.happylife.compositepicture
 
 import org.junit.Test
 
