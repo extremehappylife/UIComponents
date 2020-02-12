@@ -9,11 +9,8 @@ CornerGifView（动图圆角控件）、SlideBackLayout（Activity滑动返回�
 ## 目录
 - [UIComponents](#uicomponents)
   * [CornerGifView（动图圆角控件）](#cornergifview)
-    + [用法](#--)
   * [SlideBackLayout（Activity滑动返回组件）](#slidebacklayout)
-    + [用法](#---1)
   * [LikeAnimator（点赞动效）](#likeanimator)
-    + [用法](#---1)
 
 
 ## CornerGifView
