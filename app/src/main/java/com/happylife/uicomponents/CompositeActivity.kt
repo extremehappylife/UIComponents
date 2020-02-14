@@ -3,6 +3,7 @@ package com.happylife.uicomponents
 import android.app.Activity
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.text.TextUtils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
@@ -36,6 +37,12 @@ class CompositeActivity : Activity() {
             })
         tv_composite.setOnClickListener {
             if (bm1 != null && bm2 != null) {
+                // 写死值
+                // CompositeUtil.setXYLabel(550, 520)
+                // 百分比
+                val x = if(!TextUtils.isEmpty(et_X.text)) (et_X.text.toString()).toFloat() else 0.0f
+                val y = if(!TextUtils.isEmpty(et_Y.text)) (et_Y.text.toString()).toFloat() else 0.0f
+                CompositeUtil.setXYLabelPer(x, y)
                 iv_composite_3.setImageBitmap(CompositeUtil.combineImages(bm1,bm2))
             }
         }
